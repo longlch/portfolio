@@ -1,7 +1,6 @@
 import React from "react";
 import image from '../assets/avatar.jpg';
 
-
 class Sidebar extends React.Component {
 
     constructor(props) {

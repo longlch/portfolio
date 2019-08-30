@@ -27,7 +27,6 @@ class Skills extends Component {
 
 
     render() {
-        console.log('data1', this.showIcon("html5"));
         return (
             <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
                 <div className="w-100">
