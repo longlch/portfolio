@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://longlch.me",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
@@ -18,8 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "npm run-script build && firebase deploy"
   },
   "engines": {
     "npm": "6.9.0",
