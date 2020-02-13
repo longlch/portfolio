@@ -12,7 +12,6 @@ class Skills extends Component {
     }
 
     showIcon(iconName){
-        console.log('icon name', iconName);
         switch (iconName) {
             case "html5": return faHtml5;
             case "css3": return faCss3;
