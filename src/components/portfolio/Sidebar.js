@@ -1,5 +1,5 @@
 import React from "react";
-import image from '../assets/avatar.jpg';
+import image from '../../assets/avatar.jpg';
 
 class Sidebar extends React.Component {
 
@@ -9,7 +9,6 @@ class Sidebar extends React.Component {
     }
 
     render() {
-        console.log('data', this.sidebarData);
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
                 <a className="navbar-brand js-scroll-trigger" href="#page-top">
