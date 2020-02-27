@@ -9,7 +9,7 @@ class Experience extends Component {
 
     render() {
         return (
-            <section className="resume-section p-3 p-lg-5 d-flex justify-content-center text-left" id="experience">
+            <section className="resume-section p-3 p-lg-5 d-flex justify-content-center align-items-center text-left" id="experience">
                 <div className="w-100">
                     <h2 className="mb-5">Experience</h2>
 
