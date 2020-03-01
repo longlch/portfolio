@@ -1,45 +1,73 @@
 import React, {Component} from 'react';
+import {Nav, Navbar} from 'react-bootstrap';
+import blackAvatar from '../../assets/avatar/ava-black-shirt.svg';
+import whiteAvatar from '../../assets/avatar/ava-black-shirt-tongue.svg';
+import {Link} from 'react-scroll'
 import './Navigation.css';
 
 class Navigation extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            title: 'Long Lch',
+            navLinks: ['portfolio', 'about', 'contact'],
+            isBlackAva: true
+        };
     }
 
-    render() {
-        return (
-            <nav className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-                <div className="container">
-                    <a className="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-                    <button
-                        className="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
-                        type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        Menu
-                        <i className="fas fa-bars"></i>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarResponsive">
-                        <ul className="navbar-nav ml-auto">
-                            <li className="nav-item mx-0 mx-lg-1">
-                                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                                   href="#portfolio">Portfolio</a>
-                            </li>
-                            <li className="nav-item mx-0 mx-lg-1">
-                                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                                   href="#about">About</a>
-                            </li>
-                            <li className="nav-item mx-0 mx-lg-1">
-                                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                                   href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+    renderNavsLinks = () => {
+        return this.state.navLinks.map((item, i) =>  /*[TOLEARN]: List Component*/
+            <Link activeClass="active"
+                className="nav-item p-2  font-weight-bold text-center"
+                to={item}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                duration={500}
+                delay={500}
+                isDynamic={true}
+                offset={-50}
+                key={i}
+            >
+                {item[0].toUpperCase() + item.slice(1)}
+            </Link>
         );
     }
 
+    changeIcon = () => {
+        this.setState({
+            isBlackAva: !this.state.isBlackAva
+        });
+    }
+
+    render() {
+        const {title, isBlackAva} = this.state;
+
+        return (
+            <Navbar collapseOnSelect expand="md" bg="less-dark" variant="dark"  sticky="top">
+                <div className="container">
+                    <Navbar.Brand href="#home" className='d-flex align-items-center'>
+                        <img
+                            onMouseOver={this.changeIcon} // [TOLEARN]: Call function
+                            onMouseOut={()=>this.changeIcon()} // [TOLEARN]: Call function
+                            src={isBlackAva ? blackAvatar : whiteAvatar}
+                            width="30"
+                            height="30"
+                        />
+                        <span>&nbsp;</span>
+                        <span>{title}</span>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                    <Navbar.Collapse className="justify-content-end">
+                        <Nav>
+                            {this.renderNavsLinks()}
+                        </Nav>
+                    </Navbar.Collapse>
+                </div>
+            </Navbar>
+        );
+    }
 }
 
 export default Navigation;

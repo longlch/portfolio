@@ -6,4 +6,4 @@
 ### Deploy
 - Using namecheap as domain name, cloudflare is nameserver, Firebase for hosting
 - Build and deploy application
-   * `yarn run deplop`
+   * `npm run deploy`

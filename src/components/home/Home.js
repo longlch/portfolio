@@ -16,7 +16,7 @@ class Home extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div id='home-page'>
                 <Navigation></Navigation>
                 <MastHead></MastHead>
                 <PortfolioSection></PortfolioSection>
@@ -24,7 +24,7 @@ class Home extends Component {
                 <Contact></Contact>
                 <Footer></Footer>
                 <Copyright></Copyright>
-            </React.Fragment>
+            </div>
         );
     }
 

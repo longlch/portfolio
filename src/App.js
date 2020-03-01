@@ -1,6 +1,7 @@
 import React from 'react';
 import Portfolio from "./components/portfolio/Portfolio";
 import {BrowserRouter as Router, Route} from "react-router-dom";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/home/Home";
 import {Switch} from "react-router";
 

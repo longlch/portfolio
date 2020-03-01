@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import image from '../../assets/avataaars.svg';
+import image from '../../assets/avatar/ava-black-shirt.svg';
 
 
 class MastHead extends Component {
