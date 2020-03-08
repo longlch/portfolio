@@ -8,7 +8,11 @@ const getVisibleTodos = (todos, filter) => {
         case VisibilityFilters.SHOW_COMPLETED:
             return todos.filter(t => t.completed);
             break;
+        case VisibilityFilters.SHOW_ACTIVE:
+            return todos.filter(t => !t.completed);
+            break;
 
+        case VisibilityFilters.SHOW_ALL:
         default:
             return todos;
     }

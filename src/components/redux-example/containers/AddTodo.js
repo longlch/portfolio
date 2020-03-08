@@ -12,7 +12,6 @@ class AddTodo extends React.Component {
         let {createTodo} = this.props;
         let input
 
-
         return (
             <div>
 
