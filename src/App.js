@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/home/Home";
 import {Switch} from "react-router";
+import ReduxExample from "./components/redux-example/ReduxExample";
 
 class App extends React.Component {
 
@@ -16,6 +17,7 @@ class App extends React.Component {
             <Router>
                 <Switch>
                     <Route path='/home'><Home></Home></Route>
+                    <Route path='/todo'><ReduxExample></ReduxExample></Route>
                     <Route path='/'><Portfolio></Portfolio></Route>
                 </Switch>
             </Router>
