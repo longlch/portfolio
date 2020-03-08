@@ -10,7 +10,7 @@ export const VisibilityFilters = {
 }
 
 let nextTodoId = 1;
-export const addTodo = (text) => ({
+export const addTodo = (text) => ({  // [TOLEARN]: Abbreviation to return object in function
     type: ADD_TODO,
     id: ++nextTodoId,
     text

@@ -1,5 +1,6 @@
 import React from "react";
 import {VisibilityFilters} from "../actions/action";
+import FilterLinkContainer from "../containers/FilterLinkContainer";
 
 class Footer extends React.Component {
 
@@ -29,15 +30,12 @@ class Footer extends React.Component {
             <div>
                 {
                     this.state.visibilityItems.map((item, i) =>
-                        <button
-                            disabled={currentVisible === item.type}
-                            onClick={()=>{
-                                filterTodo(item.type);
-                            }}
-                            style={{marginLeft: '4px', color: currentVisible === item.type ? 'grey' : 'blue'}}
-                            key={i}>
+                        <FilterLinkContainer
+                            filter={item.type}
+                            key={i}
+                        >
                             {item.text}
-                        </button>
+                        </FilterLinkContainer>
                     )
                 }
             </div>

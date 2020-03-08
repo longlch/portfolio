@@ -1,20 +1,20 @@
 import {showVisibility} from "../actions/action";
 import {connect} from "react-redux";
-import Footer from "../components/Footer";
+import FilterButton from "../components/FilterButton";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        currentVisible: state.visibilityReducer
+        isDisabled: ownProps.filter === state.visibilityReducer
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        filterTodo: filter => {
-            dispatch(showVisibility(filter));
-        }
+        filterTodo: () =>
+            dispatch(showVisibility(ownProps.filter))
+
     }
 }
 
-const FilterLinkContainer = connect(mapStateToProps, mapDispatchToProps)(Footer)
+const FilterLinkContainer = connect(mapStateToProps, mapDispatchToProps)(FilterButton)
 export default FilterLinkContainer;
