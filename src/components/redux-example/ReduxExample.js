@@ -1,6 +1,10 @@
 import React from 'react';
 import App from "./components/App";
+import { createStore } from 'redux';
+import {Provider} from "react-redux";
+import totalReducer from "./reducers/reducer";
 
+const store = createStore(totalReducer);
 
 class ReduxExample extends React.Component {
 
@@ -11,7 +15,9 @@ class ReduxExample extends React.Component {
     render() {
         return (
             <div>
-                <App/>
+                <Provider store={store}>
+                    <App/>
+                </Provider>
             </div>
         );
     }
