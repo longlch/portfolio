@@ -4,7 +4,7 @@ const initialState = {
     todos: [
         {
             id: 1,
-            text: 'long',
+            text: 'The harder that challenges you, The stronger you become',
             completed: false
         }
     ]

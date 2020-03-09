@@ -11,3 +11,4 @@
 - React:
   + Render `List Component`
   + `Call function` in 2 ways (es6)
+  + `Abbreviation` in return funtion

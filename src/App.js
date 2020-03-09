@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from "./components/home/Home";
 import {Switch} from "react-router";
 import ReduxExample from "./components/redux-example/ReduxExample";
+import PracticeTodoApp from "./components/practice/PracticeTodoApp";
 
 class App extends React.Component {
 
@@ -18,6 +19,7 @@ class App extends React.Component {
                 <Switch>
                     <Route path='/home'><Home></Home></Route>
                     <Route path='/todo'><ReduxExample></ReduxExample></Route>
+                    <Route path='/practice-todo'><PracticeTodoApp/></Route>
                     <Route path='/'><Portfolio></Portfolio></Route>
                 </Switch>
             </Router>
