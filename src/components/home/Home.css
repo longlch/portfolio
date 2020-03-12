@@ -9546,7 +9546,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .page-section {
-    padding: 6rem 0;
+    padding: 5rem 0;
 }
 
 .page-section .page-section-heading {
@@ -9695,7 +9695,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .masthead {
-    padding-top: calc(6rem + 74px);
+    padding-top: calc(6rem);
     padding-bottom: 6rem;
 }
 
@@ -9714,7 +9714,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (min-width: 992px) {
     .masthead {
-        padding-top: calc(6rem + 104px);
+        padding-top: calc(6rem);
         padding-bottom: 6rem;
     }
     .masthead .masthead-heading {
@@ -9724,10 +9724,6 @@ a.text-dark:hover, a.text-dark:focus {
     .masthead .masthead-subheading {
         font-size: 1.5rem;
     }
-}
-
-.portfolio {
-    margin-bottom: -30px;
 }
 
 .portfolio .portfolio-item {
