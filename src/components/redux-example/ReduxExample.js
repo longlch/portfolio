@@ -1,8 +1,10 @@
 import React from 'react';
-import App from "./components/App";
-import { createStore } from 'redux';
+import {createStore} from 'redux';
 import {Provider} from "react-redux";
 import totalReducer from "./reducers/reducer";
+import AddTodo from "./containers/AddTodo";
+import VisibleTodoList from "./containers/VisibleTodoList";
+import Footer from "./components/Footer";
 
 const store = createStore(totalReducer);
 
@@ -16,7 +18,9 @@ class ReduxExample extends React.Component {
         return (
             <div>
                 <Provider store={store}>
-                    <App/>
+                    <AddTodo/>
+                    <VisibleTodoList/>
+                    <Footer/>
                 </Provider>
             </div>
         );
