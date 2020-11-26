@@ -7,3 +7,4 @@
 - Using namecheap as domain name, cloudflare is nameserver, Firebase for hosting
 - Build and deploy application
    * `npm run deploy`
+   asd
